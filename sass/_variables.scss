@@ -1,0 +1,21 @@
+// FONT
+$header-1: 2.5rem;
+$header-2: 4rem;
+$header-3: 2.5rem;
+$header-4: 2rem;
+$text: 2.5rem;
+
+// LINEAR GRADIENT
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+
+// COLOR
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+// MIXIN
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

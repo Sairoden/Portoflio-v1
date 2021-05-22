@@ -1,0 +1,137 @@
+@import "variables";
+
+/* GLOBAL STYLES */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: $text;
+}
+
+// H1
+h1 {
+  font-size: $header-1;
+}
+
+// H2
+h2 {
+  font-size: $header-2;
+}
+
+// H3
+h3 {
+  font-size: $header-3;
+}
+
+// H4 AND H5
+h4,
+h5 {
+  font-size: $header-4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $gray-text;
+}
+
+@media only screen and (max-width: 1350px) {
+  html {
+    font-size: 53%;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  svg {
+    width: 80%;
+  }
+
+  nav {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 45%;
+  }
+
+  svg {
+    height: 60%;
+  }
+
+  .main-head {
+    width: 100%;
+  }
+
+  nav {
+    .logo {
+      @include flex(center, center, column);
+      flex: 1 1 20rem;
+      margin-top: 2rem;
+    }
+
+    ul {
+      flex: 1 1 60rem;
+      margin: 2rem 0;
+    }
+  }
+
+  .intro-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .intro-images {
+    text-align: center;
+  }
+
+  .intro-social {
+    @include flex(center, center, row);
+
+    a {
+      margin: 2rem;
+    }
+  }
+
+  .elena,
+  .travelly {
+    flex: 1 1 50rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+}
